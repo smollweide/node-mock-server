@@ -1,51 +1,51 @@
 {
-	"name": "node-mock-server",
-	"version": "0.11.0",
-	"description": "File based Node API mock server",
-	"email": "simon.mollweide@web.de",
-	"author": "Simon Mollweide <simon.mollweide@web.de>",
-	"url": "https://github.com/smollweide/node-mock-server",
-	"repository": {
-		"type": "github",
-		"url": "https://github.com/smollweide/node-mock-server"
-	},
-	"bugs": {
-		"url": "https://github.com/smollweide/node-mock-server/issues"
-	},
-	"scripts": {
-		"start": "node app.js",
-		"test": "mocha test/tests.js"
-	},
-	"main": "mock-server.js",
-	"keywords": [
-		"node",
-		"npm",
-		"mock",
-		"rest",
-		"rest API",
-		"json",
-		"DTO",
-		"Swagger"
-	],
-	"engines": {
-		"node": ">=0.12.7"
-	},
-	"preferGlobal": false,
-	"private": false,
-	"license": "MIT",
-	"dependencies": {
-		"body-parser": "^1.15.0",
-		"chip": "0.0.5",
-		"deasync": "^0.1.4",
-		"ejs": "^2.4.1",
-		"express": "^4.13.4",
-		"extend": "^3.0.0",
-		"faker": "^4.1.0",
-		"request": "^2.72.0"
-	},
-	"devDependencies": {
-		"babel-eslint": "^6.0.3",
-		"eslint": "^2.8.0",
-		"mocha": "^2.4.5"
-	}
+  "name": "blt-node-mock-server",
+  "version": "0.0.2",
+  "description": "File based Node API mock server",
+  "email": "simon.mollweide@web.de",
+  "author": "Simon Mollweide <simon.mollweide@web.de> yaofei",
+  "url": "https://github.com/meetup/node-mock-server",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/meetup/node-mock-server"
+  },
+  "bugs": {
+    "url": "https://github.com/smollweide/node-mock-server/issues"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha test/tests.js"
+  },
+  "main": "mock-server.js",
+  "keywords": [
+    "node",
+    "npm",
+    "mock",
+    "rest",
+    "rest API",
+    "json",
+    "DTO",
+    "Swagger"
+  ],
+  "engines": {
+    "node": ">=0.12.7"
+  },
+  "preferGlobal": false,
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "chip": "0.0.5",
+    "deasync": "^0.1.4",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "extend": "^3.0.0",
+    "faker": "^4.1.0",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.3",
+    "eslint": "^2.8.0",
+    "mocha": "^2.4.5"
+  }
 }
