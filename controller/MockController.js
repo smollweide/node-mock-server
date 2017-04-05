@@ -62,6 +62,12 @@ MockController.prototype = extend(MockController.prototype, {
 			return true;
 		}
 
+        if (path == this.options.swaggerImport.path) {
+            var fc=this.readFile(path.substring(1));
+            res.send(fc);
+            return true;
+        }
+
 		if (preferences && preferences.responseDelay) {
 			timeout = parseInt(preferences.responseDelay);
 		}
