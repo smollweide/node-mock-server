@@ -16,6 +16,7 @@
 - Node.js and file based ([folder structure](/doc/readme-folder-structure.md))
 - API documentation UI
 - [Functions in mock data](/doc/readme-mock-functions.md)
+- [HTTP status code in mock data](/docs/readme-mock-status.md)
 - [Faker included](/doc/readme-faker.md)
 - [Query params in mock data](/doc/readme-query-params.md)
 - [Dynamic path params in mock data](/doc/readme-path-params.md)
