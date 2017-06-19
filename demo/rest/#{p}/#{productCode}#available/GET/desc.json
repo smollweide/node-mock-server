@@ -1,0 +1,24 @@
+{
+	"desc": "Returns a list of products",
+	"security": [],
+	"protected": false,
+	"status": "open",
+	"request": {
+		"query": {
+			"parameters": [
+				{
+					"name": "query",
+					"required": false,
+					"type": "string",
+					"desc": "Search query"
+				}
+			]
+		}
+	},
+	"response": {
+		"statusCode": 200,
+		"schema": {
+			"type": "application/json"
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"desc": "Return anhthing with",
+	"security": [],
+	"protected": false,
+	"status": "open",
+	"response": {
+		"statusCode": 201,
+		"schema": {
+			"type": "application/json"
+		}
+	}
+}

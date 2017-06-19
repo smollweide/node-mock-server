@@ -1,0 +1,12 @@
+{
+	"desc": "Returns a validation of selected endpoint",
+	"security": [],
+	"protected": false,
+	"status": "open",
+	"response": {
+		"statusCode": 200,
+		"schema": {
+			"type": "application/json"
+		}
+	}
+}
