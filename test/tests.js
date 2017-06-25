@@ -75,6 +75,7 @@ new ValidatorResponses({
 swaggerImporter.doImport(function () {
 
 	describe('MockServer', require('./tests-mock-server').bind(this, serverOptions, _getFile));
+	describe('UserInterface', require('./tests-userinterface').bind(this, serverOptions, _getFile));
 	describe('Preferences', require('./tests-preferences').bind(this, serverOptions, _getFile));
 	describe('SwaggerImport', require('./tests-swagger-import').bind(this, serverOptions, _getFile));
 	describe('GetResponse', require('./tests-get-response').bind(this, serverOptions, _getFile));

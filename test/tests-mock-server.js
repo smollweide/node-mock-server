@@ -7,6 +7,7 @@ function _fetch (opt) {
 	request({
 		uri: opt.url,
 		method: opt.method || 'GET',
+		headers: opt.headers,
 		form: opt.data || {}
 	}, function(error, res, data) {
 		if (error) {
@@ -48,6 +49,38 @@ module.exports = function(serverOptions, _getFile) {
 		assert.equal(path, '/node-mock-server/demo/rest/products/search');
 	});
 
+	it('method _getResponseFilePath Accept: application/json', function() {
+		var mockController = new MockController();
+		var req = { header: function() {return 'application/json'}},
+			dir = '/node-mock-server/test/rest/products/#/GET/',
+			path = mockController._getResponseFilePath(req, dir, 'success');
+		assert.equal(path, '/node-mock-server/test/rest/products/#/GET/mock/success.json');
+	});
+
+	it('method _getResponseFilePath Accept: text/html', function() {
+		var mockController = new MockController();
+		var req = { header: function() {return 'text/html'}},
+			dir = '/node-mock-server/test/rest/products/#/GET/',
+			path = mockController._getResponseFilePath(req, dir, 'success');
+		assert.equal(path, '/node-mock-server/test/rest/products/#/GET/mock/success.html');
+	});
+
+	it('method _getResponseFilePath Accept: application/xml', function() {
+		var mockController = new MockController();
+		var req = { header: function() {return 'application/xml'}},
+			dir = '/node-mock-server/test/rest/products/#/GET/',
+			path = mockController._getResponseFilePath(req, dir, 'success');
+		assert.equal(path, '/node-mock-server/test/rest/products/#/GET/mock/success.xml');
+	});
+
+	it('method _getResponseFilePath no Accept header', function() {
+		var mockController = new MockController();
+		var req = { header: function() {return undefined}},
+			dir = '/node-mock-server/test/rest/products/#/GET/',
+			path = mockController._getResponseFilePath(req, dir, 'success');
+		assert.equal(path, '/node-mock-server/test/rest/products/#/GET/mock/success.json');
+	});
+
 	it('GET /products/search', function (done) {
 		_fetch({
 			url: baseUrl + '/products/search?_expected=success',
@@ -64,6 +97,30 @@ module.exports = function(serverOptions, _getFile) {
 			url: baseUrl + '/products?_expected=success',
 			success: function (data) {
 				var expected = _getFile(pathExpected + '/01.json');
+				assert.equal(data, expected);
+				done();
+			}
+		});
+	});
+
+	it('GET /products xml', function (done) {
+		_fetch({
+			url: baseUrl + '/products?_expected=success',
+			headers: {Accept: 'application/xml'},
+			success: function (data) {
+				var expected = _getFile(pathExpected + '/01.xml');
+				assert.equal(data, expected);
+				done();
+			}
+		});
+	});
+
+	it('GET /products html', function (done) {
+		_fetch({
+			url: baseUrl + '/products?_expected=success',
+			headers: {Accept: 'text/html'},
+			success: function (data) {
+				var expected = _getFile(pathExpected + '/01.html');
 				assert.equal(data, expected);
 				done();
 			}
