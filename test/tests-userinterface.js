@@ -6,9 +6,6 @@ var assert = require('assert'),
 
 module.exports = function(serverOptions, _getFile) {
 
-	var pathExpected = './test/expected/mock-server',
-		baseUrl = serverOptions.urlBase + serverOptions.urlPath;
-
 	it('method _readApiMethods', function () {
 
 		var userInterface = new UserInterface(serverOptions);
