@@ -345,7 +345,7 @@
 			$('input#newResponseName').val(e.currentTarget.value);
 		});
 
-        // must apply field value on change, else value is not updated
+		// must apply field value on change, else value is not updated
 		$('input.new-response-type').on('change', function (e) {
 			$('input#newResponseType').val(e.currentTarget.value);
 		});
