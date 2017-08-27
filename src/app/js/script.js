@@ -350,6 +350,10 @@
 			$('input#newResponseType').val(e.currentTarget.value);
 		});
 
+		$(function () {
+			$('[data-toggle="popover"]').popover();
+		});
+
 		$('.js-delete-response').on('click', function (event) {
 			event.preventDefault();
 

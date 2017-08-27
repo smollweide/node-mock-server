@@ -91,14 +91,19 @@
 		<% } %>
 	</div>
 	<div class="form-inline">
-		<div><label>Add new Response</label></div>
+		<div><label>Add new response</label></div>
 		<div class="form-group">
-			<label class="sr-only" for="newResponseName">Add Response</label>
-			<input id="newResponseName" class="form-control input-sm new-response-name" placeholder="Response name"/>
+			<div class="input-group">
+				<div class="input-group-btn">
+					<a tabindex="0" class="btn btn-default btn-sm" role="button" data-toggle="popover" data-trigger="focus" data-content="Used to identify the response. An error response suffixed with -4xx or -5xx produces the corresponding http status code, e.g. error-423" aria-label="Help"><span class="glyphicon glyphicon-question-sign"></span></a>
+				</div>
+				<label class="sr-only" for="newResponseName">Add Response</label>
+				<input id="newResponseName" class="form-control input-sm new-response-name" placeholder="Response name"/>
+			</div>
 		</div>
 		<div class="form-group">
-			<label class="sr-only" for="newResponseType">Response Type</label>
 			<div class="input-group js-response-type">
+				<label class="sr-only" for="newResponseType">Response Type</label>
 				<input type="text" id="newResponseType" class="form-control input-sm new-response-type" placeholder="Type", value="json">
 				<div class="input-group-btn">
 					<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
@@ -112,10 +117,10 @@
 						<li><a href="#">gif</a></li>
 						<li><a href="#">png</a></li>
 					</ul>
-				</div><!-- /btn-group -->
+				</div>
 			</div>
 		</div>
 		<button type="button" class="btn btn-primary btn-sm js-add-response"data-path="<%=method.basePath%>"
-				data-method="<%=method.id%>">+ Add Response</button>
+				data-method="<%=method.id%>">+ Add response</button>
 	</div>
 </div>
