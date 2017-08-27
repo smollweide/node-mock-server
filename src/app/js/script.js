@@ -346,9 +346,9 @@
 		});
 
         // must apply field value on change, else value is not updated
-        $('input.new-response-type').on('change', function (e) {
-            $('input#newResponseType').val(e.currentTarget.value);
-        });
+		$('input.new-response-type').on('change', function (e) {
+			$('input#newResponseType').val(e.currentTarget.value);
+		});
 
 		$('.js-delete-response').on('click', function (event) {
 			event.preventDefault();
