@@ -6,10 +6,8 @@
 			<%=urlMock%>
 		</a>
 	</p>
-	<div class="form-group">
-		<label for="<%=service.id%><%=method.id%>_mockdown">
-			Choose an expected response:
-		</label>
+	<div>
+		<div><label>Choose an expected response</label></div>
 		<p>
 			<a
 				class="btn btn-default btn-xs js-open-ide"
@@ -91,13 +89,33 @@
 
 			</div>
 		<% } %>
-		<button
-			class="btn btn-primary btn-xs js-add-response"
-			href="#"
-			data-path="<%=method.basePath%>"
-			data-method="<%=method.id%>"
-		>
-			+ add
-		</button>
+	</div>
+	<div class="form-inline">
+		<div><label>Add new Response</label></div>
+		<div class="form-group">
+			<label class="sr-only" for="newResponseName">Add Response</label>
+			<input id="newResponseName" class="form-control input-sm new-response-name" placeholder="Response name"/>
+		</div>
+		<div class="form-group">
+			<label class="sr-only" for="newResponseType">Response Type</label>
+			<div class="input-group js-response-type">
+				<input type="text" id="newResponseType" class="form-control input-sm new-response-type" placeholder="Type", value="json">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></button>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">json</a></li>
+						<li><a href="#">xml</a></li>
+						<li><a href="#">txt</a></li>
+						<li><a href="#">csv</a></li>
+						<li><a href="#">html</a></li>
+						<li><a href="#">pdf</a></li>
+						<li><a href="#">gif</a></li>
+						<li><a href="#">png</a></li>
+					</ul>
+				</div><!-- /btn-group -->
+			</div>
+		</div>
+		<button type="button" class="btn btn-primary btn-sm js-add-response"data-path="<%=method.basePath%>"
+				data-method="<%=method.id%>">+ Add Response</button>
 	</div>
 </div>

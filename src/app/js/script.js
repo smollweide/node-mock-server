@@ -313,13 +313,13 @@
 			event.preventDefault();
 
 			var $btn = $(event.currentTarget);
-			var name = window.prompt('Enter response name');
+			var name = [$('#newResponseName').val(), '.', $('#newResponseType').val()].join('');
+			if (name === '.' || name.indexOf('.') === 0) {
+				return;
+			}
 			var path = encodeURIComponent($btn.data('path'));
 			var method = encodeURIComponent($btn.data('method'));
 
-			if (name === null || name === '') {
-				return;
-			}
 
 			$.ajax({
 				url: '/service/response/' + path + '/' + method,
@@ -335,6 +335,20 @@
 				},
 			});
 		});
+
+		$('.js-response-type ul.dropdown-menu li a').click(function (e) {
+			$('.js-response-type input').val(e.target.text).focus();
+		});
+
+		// must apply field value on change, else value is not updated
+		$('input.new-response-name').on('change', function (e) {
+			$('input#newResponseName').val(e.currentTarget.value);
+		});
+
+        // must apply field value on change, else value is not updated
+        $('input.new-response-type').on('change', function (e) {
+            $('input#newResponseType').val(e.currentTarget.value);
+        });
 
 		$('.js-delete-response').on('click', function (event) {
 			event.preventDefault();
