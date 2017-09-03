@@ -9,3 +9,4 @@ node_modules
 npm-debug.log
 /func-imported
 package-lock.json
+*~

@@ -58,6 +58,7 @@ mockServer({
     createEmptyFile: true,
     overwriteExistingDescriptions: true,
     responseFuncPath: path.join(__dirname, '/func-imported')
-  }
+  },
+  open: true
 });
 ```

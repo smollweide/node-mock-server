@@ -22,4 +22,4 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use('/dist', express.static(__dirname + '/dist'));
 ```
 
-[example](/demo/index.js#L37)
+[example](/demo/options.js#L37)

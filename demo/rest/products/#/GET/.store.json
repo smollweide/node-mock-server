@@ -5,6 +5,12 @@
     },
     "success.headers": {
       "counter": 1
+    },
+    "tunnel-latest.json": {
+      "counter": 0
+    },
+    "success.json": {
+      "counter": 0
     }
   }
 }

@@ -211,3 +211,10 @@ Optional
 
 A string that define the path to the custom DTO to class template.
 [template](/src/templates/dto_es6flow.ejs)
+
+
+#### options.open
+Type: `Boolean`
+Optional
+
+A boolean to decide to open the UI after start or not.

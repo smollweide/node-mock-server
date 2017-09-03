@@ -22,12 +22,13 @@
 
 			<% var isDocument = true; %>
 			<% var isMiddleware = mock.name.search(/^middleware$/) >= 0; %>
+			<% var isTunnel = mock.name.search(/^tunnel$/) >= 0; %>
 			<% var isImage = (mock.mime || '').search(/^image\//) >= 0; %>
 			<% var isJSON = (mock.mime || '').search(/json$/) >= 0; %>
 			<% var isError = mock.name.search(/error/) >= 0; %>
-			<% if (isImage || isJSON || isError || isMiddleware) { isDocument = false;  } %>
+			<% if (isImage || isJSON || isError || isMiddleware || isTunnel) { isDocument = false;  } %>
 
-			<% var noInteractionPossible = isMiddleware || isImage; %>
+			<% var noInteractionPossible = isMiddleware || isImage || isTunnel; %>
 
 			<% var showValidationResult = isJSON && !isError; %>
 			<% var showDeleteBtn = isJSON || isImage || isDocument; %>

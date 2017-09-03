@@ -1,6 +1,6 @@
 {
 	"name": "node-mock-server",
-	"version": "0.17.4",
+	"version": "0.18.1",
 	"description": "File based Node REST API mock server",
 	"email": "simon.mollweide@web.de",
 	"author": "Simon Mollweide <simon.mollweide@web.de>",
@@ -48,6 +48,7 @@
 	"dependencies": {
 		"body-parser": "^1.15.0",
 		"chip": "0.0.5",
+		"cookie-parser": "^1.4.3",
 		"deasync": "^0.1.4",
 		"ejs": "^2.4.1",
 		"es6-promise-polyfill": "^1.2.0",
