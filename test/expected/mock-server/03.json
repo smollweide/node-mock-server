@@ -1,3 +1,13 @@
 {
-	"success": true
+    "success": true,
+    "body": "test",
+    "query": "",
+    "param": "31221",
+    "faker": "Lauriane.Greenholt@gmail.com",
+    "price": {
+        "currency": "CHF",
+        "price": {
+            "value": 12
+        }
+    }
 }

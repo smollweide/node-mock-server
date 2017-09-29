@@ -1,1 +1,13 @@
-{"success":true}
+{
+	"success": true,
+	"body": "",
+	"query": "",
+	"param": "test",
+	"faker": "Benjamin8@hotmail.com",
+	"price": {
+		"currency": "CHF",
+		"price": {
+			"value": 12
+		}
+	}
+}

@@ -33,9 +33,14 @@ module.exports = function(serverOptions, _getFile) {
 			method: 'post',
 			expected: 'success'
 		}, serverOptions);
-		expected = _getFile(pathExpGetResponse + '/02.json');
+		expected = JSON.parse(_getFile(pathExpGetResponse + '/02.json'));
 		data = response.get();
-		assert.equal(JSON.stringify(data), expected);
+		assert.equal(data.success, expected.success);
+		assert.equal(data.body, expected.body);
+		assert.equal(data.query, expected.query);
+		assert.equal(data.param, expected.param);
+		assert.equal(typeof data.faker, typeof expected.faker);
+		assert.equal(typeof data.price, typeof expected.price);
 	});
 
 	// FAKER call

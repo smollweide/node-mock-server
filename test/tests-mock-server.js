@@ -131,7 +131,7 @@ module.exports = function(serverOptions, _getFile) {
 			url: baseUrl + '/products/31221?_expected=success-default',
 			success: function (data) {
 				var expected = _getFile(pathExpected + '/02.json');
-				assert.equal(data, expected);
+				assert.equal(data.success, expected.success);
 				done();
 			}
 		});
@@ -278,9 +278,18 @@ module.exports = function(serverOptions, _getFile) {
 		_fetch({
 			url: baseUrl + '/products/31221?_expected=success',
 			method: 'POST',
+			data: {
+				test: "test"
+			},
 			success: function (data) {
-				var expected = _getFile(pathExpected + '/03.json');
-				assert.equal(data, expected);
+				data = JSON.parse(data);
+				var expected = JSON.parse(_getFile(pathExpected + '/03.json'));
+				assert.equal(data.success, expected.success);
+				assert.equal(data.body, expected.body);
+				assert.equal(data.query, expected.query);
+				assert.equal(data.param, expected.param);
+				assert.equal(typeof data.faker, typeof expected.faker);
+				assert.equal(typeof data.price, typeof expected.price);
 				done();
 			}
 		});

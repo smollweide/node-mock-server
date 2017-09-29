@@ -1,6 +1,6 @@
 {
     "name": "node-mock-server",
-    "version": "0.18.2",
+    "version": "0.19.0-alpha",
     "description": "File based Node REST API mock server",
     "email": "simon.mollweide@web.de",
     "author": "Simon Mollweide <simon.mollweide@web.de>",
@@ -59,6 +59,7 @@
         "inquirer": "^3.2.1",
         "make-dir": "^1.0.0",
         "mime-types": "^2.1.15",
+        "minimatch": "^3.0.4",
         "open": "0.0.5",
         "p-series": "^1.0.0",
         "request": "^2.72.0"

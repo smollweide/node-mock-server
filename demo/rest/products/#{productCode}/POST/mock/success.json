@@ -1,3 +1,8 @@
 {
-	"success": true
+	"success": true,
+	"body": "<%-body.test%>",
+	"query": "<%-query.test%>",
+	"param": "<%-params.productCode%>",
+	"faker": "<%-faker.internet.email();%>",
+	"price": <%-price(12,'CHF');%>
 }
