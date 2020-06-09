@@ -4,11 +4,14 @@
 #### options.restPath
 Type: `String`
 Default value: `'./rest'`
+Docker env: `REST_PATH`
 
 A string value that defines the path to the rest API folder.
 
+
 #### options.dirName
 Type: `String`
+Docker env: `DIR_NAME`
 
 A string value that defines the root directory (__dirname).
 
@@ -33,6 +36,7 @@ A string value that defines the mock Rest API url.
 #### options.urlPath
 Type: `String`
 Default value: `/rest/v1`
+Docker env: `URL_PATH`
 
 A string value that defines the path for the mock Rest API.
 
@@ -45,6 +49,7 @@ A number value that defines the application port.
 #### options.uiPath
 Type: `string`
 Default value: `/`
+Docker env: `UI_PATH`
 
 A string value that defines the path for the node-mock-server UI.
 
@@ -230,6 +235,7 @@ An agent to reach a swagger url outside a corporate proxy.
 #### options.customDTOToClassTemplate
 Type: `String`
 Optional
+Docker env: `CUSTOM_DTO_TO_CLASS_TEMPLATE`
 
 A string that define the path to the custom DTO to class template.
 [template](/src/templates/dto_es6flow.ejs)
@@ -238,6 +244,7 @@ A string that define the path to the custom DTO to class template.
 #### options.open
 Type: `Boolean`
 Optional
+Docker env: `OPEN`
 
 A boolean to decide to open the UI after start or not.
 
@@ -245,6 +252,7 @@ A boolean to decide to open the UI after start or not.
 #### options.optionsFallbackPath
 Type: `String`
 Optional
+Docker env: `OPTIONS_FALLBACK_PATH`
 
 A string that defines and enables the options fallback.
 This allows you to define a fallback for every options call except there is one defined for the affected endpoint.

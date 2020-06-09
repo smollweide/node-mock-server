@@ -50,9 +50,10 @@
   "license": "MIT",
   "dependencies": {
     "chip": "0.0.5",
-    "ejs": "2.6.1",
+    "convict": "6.0.0",
     "cookie-parser": "1.4.5",
     "deasync": "0.1.20",
+    "ejs": "2.6.1",
     "es6-promise-polyfill": "1.2.0",
     "express": "4.17.1",
     "extend": "3.0.2",
@@ -64,9 +65,9 @@
     "minimatch": "3.0.4",
     "opener": "1.5.1",
     "p-series": "2.1.0",
+    "react-dev-utils": "5.0.2",
     "request": "2.88.2",
-    "yamljs": "0.3.0",
-    "react-dev-utils": "5.0.2"
+    "yamljs": "0.3.0"
   },
   "devDependencies": {
     "@dash4/plugin-dependencies": "0.8.4",
