@@ -50,7 +50,7 @@
   "license": "MIT",
   "dependencies": {
     "chip": "0.0.5",
-    "ejs": "2.6.1",
+    "ejs": "3.1.7",
     "cookie-parser": "1.4.5",
     "deasync": "0.1.20",
     "es6-promise-polyfill": "1.2.0",
