@@ -54,7 +54,7 @@
     "cookie-parser": "1.4.5",
     "deasync": "0.1.20",
     "es6-promise-polyfill": "1.2.0",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "extend": "3.0.2",
     "faker": "4.1.0",
     "inflect": "0.4.1",
