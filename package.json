@@ -79,6 +79,6 @@
     "babel-eslint": "10.1.0",
     "eslint": "7.0.0",
     "eslint-plugin-import": "2.20.2",
-    "mocha": "7.1.2"
+    "mocha": "10.2.0"
   }
 }
