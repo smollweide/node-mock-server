@@ -51,10 +51,10 @@
   "dependencies": {
     "chip": "0.0.5",
     "ejs": "2.6.1",
-    "cookie-parser": "1.4.5",
+    "cookie-parser": "1.4.7",
     "deasync": "0.1.20",
     "es6-promise-polyfill": "1.2.0",
-    "express": "4.17.1",
+    "express": "4.21.1",
     "extend": "3.0.2",
     "faker": "4.1.0",
     "inflect": "0.4.1",
